@@ -35,14 +35,12 @@ namespace TestHomeWork12
         }
 
         //
-
-        [Fact(DisplayName = "GetLastConteinEE 1")]
-        public void GetLastConteinEETest1()
-        { 
-            List<string> list = new List<string>() { "aa", "bd", "cd", "dd", "1ee", "2ee", "4ee", "e" };
-            Assert.Equal("4ee", WorkerWithLINQ.GetLastContainEE(list));
-        }
-
+        
+        [Theory(DisplayName = "GetLastConteinEE")]
+        [MemberData(nameof(Data2))]
+        public void GetLastConteinEETest(List<string> list, string expected)
+        {
+            Assert.Equal(expected, WorkerWithLINQ.GetLastContainEE(list));
         }
 
         [Theory(DisplayName = "Should find string in list")]
@@ -71,6 +69,27 @@ namespace TestHomeWork12
             {
                 new List<string> { "dd", "dd", "cd", "dd", "1ee1", "2ee1", "4ee1", "ee" },
                 "b"
+            };
+        }
+
+        public static IEnumerable<object[]> Data2()
+        {
+            yield return new object[]
+            {
+                new List<string> { "ee", "bd", "cd", "dd", "1ee1", "2ee1", "4ee1", "2ee" },
+                "2ee"
+            };
+
+            yield return new object[]
+            {
+                new List<string> { "b", "d", "cd", "dd", "1ee1ee", "2ee1", "4ee1", "2eeg" },
+                "1ee1ee"
+            };
+
+            yield return new object[]
+            {
+                new List<string> { "dd", "dd", "cd", "dd", "1ee1", "2ee1", "4ee1", "eee3" },
+                null
             };
         }
     }
