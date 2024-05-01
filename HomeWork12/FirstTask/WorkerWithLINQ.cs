@@ -32,7 +32,7 @@ namespace HomeWork12.FirstTask
         массиве.*/
         public static int GetNumberOfUnique(List<string> list)
         {
-            return list.Distinct().Count() - 1;
+            return list.Distinct().Count();
         }
 
         /* Напишите метод, который принимает список и извлекает значения от 5
