@@ -1,7 +1,7 @@
 ﻿
 using System.Linq;
 
-namespace HomeWork12.SecomdTask
+namespace HomeWork12.SecondTask
 {
     public class User
     {

@@ -39,7 +39,7 @@
 //Second Task
 
 
-using HomeWork12.SecomdTask;
+using HomeWork12.SecondTask;
 
 User us = new User("Nda", "Xfsdf", "b");
 User us1 = new User("Nfg", "Dvcb", "a");
