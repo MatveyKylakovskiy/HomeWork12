@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="HomeWork11">
+      <HintPath>..\..\HomeWork11\HomeWork11\bin\Debug\net8.0\HomeWork11.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
